@@ -46,13 +46,66 @@
           "Selamat Datang di Gerbang Pusat Pengkajian Hadis Indonesia" <br>
             Mari bergabung bersama kami!
         </p>
+        <div class="daftar-demo">
+          <div class="daftar">Daftar Santri/Mahasantri Baru</div>
+          <div class="demo">
+            <a href="#">
+              <svg class="view no-underline" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M20 4.16675C28.7432 4.16675 35.8333 11.2553 35.8333 20.0001C35.8333 28.7448 28.7432 35.8334 20 35.8334C11.2553 35.8334 4.16667 28.7448 4.16667 20.0001C4.16667 11.2553 11.2553 4.16675 20 4.16675Z" stroke="#191A15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M25 19.9919C25 18.64 18.0709 14.3152 17.2849 15.0928C16.4988 15.8705 16.4233 24.0401 17.2849 24.891C18.1465 25.7449 25 21.3438 25 19.9919Z" stroke="#191A15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="#">
+              <p class="no-underline">View Demo</p>
+            </a>
+            </div>
+        </div>
       </div>
       <div class="hero-img">
-        <h2>Konten Gambar</h2>
+        <img class="img-yai" src="/public/img/pak-yai.png" alt="Pak Kyai">
+        <img class="img-gus" src="/public/img/gus-zia.png" alt="FGus Zia">
       </div>
     </div>
 
+    <!-- PROMOTION -->
+    <div class="promotion">
+      <h2>
+        Lebih dari 25,000 alumni Darus-Sunnah mengabdi membangun negeri
+      </h2>
+      <div class="logo-logo">
+        <img src="/public/img/darsun.png" alt="">
+        <img src="/public/img/iads.png" alt="">
+        <img src="/public/img/bs.png" alt="">
+        <img src="/public/img/imdar.png" alt="">
+        <img src="/public/img/isdar.png" alt="">
+        <img src="/public/img/lttds.png" alt="">
+        <img src="/public/img/itqon.png" alt="">
+        <img src="/public/img/nabawi.png" alt="">
+        <img src="/public/img/pmd.png" alt="">
+        <img src="/public/img/rasio.png" alt="">
+        <img src="/public/img/sids.png" alt="">
+      </div>
+    </div>
 
   </div>
+  <script>
+    const galleryContainer = document.querySelector('.logo-logo');
+    const images = document.querySelectorAll('.logo-logo img');
+    const imageWidth = images[0].clientWidth;
+    let currentIndex = 0;
+  
+    function scrollImages() {
+      currentIndex++;
+      if (currentIndex >= images.length) {
+        currentIndex = 0;
+      }
+      const offset = -currentIndex * imageWidth *6;
+      // galleryContainer.style.transform = `translateX(${50}px)`;
+      galleryContainer.style.transform = `translateX(${offset}px)`;
+    }
+  
+    // Set the interval to scroll every second (1000 milliseconds)
+    setInterval(scrollImages, 2000);
+  </script>
 </body>
 </html>
